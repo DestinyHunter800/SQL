@@ -1,0 +1,32 @@
+CREATE TABLE motorbikes (id INTEGER PRIMARY KEY, Name TEXT, Style TEXT, Price INTEGER, Max_MPH INTEGER);
+
+INSERT INTO motorbikes VALUES (1, "Harley Davidson", "Cruiser", 18399.00, 115);
+INSERT INTO motorbikes VALUES (2, "Honda Fury", "Cruiser", 11499.00, 103);
+INSERT INTO motorbikes VALUES (3, "Honda CBR", "Sport", 8749.00, 186);
+INSERT INTO motorbikes VALUES (4, "Yamaha vmax", "Cruiser", 17999.00, 150);
+INSERT INTO motorbikes VALUES (5, "Bmw gt", "Scooter", 8495.00, 86);
+INSERT INTO motorbikes VALUES (6, "Kawasaki ninja", "Sport", 4000.00, 116);
+INSERT INTO motorbikes VALUES (7, "TVS Jupiter", "Scooter", 890.00, 80);
+INSERT INTO motorbikes VALUES (8, "Suzuki GSX", "Sport", 12849.00, 183);
+INSERT INTO motorbikes VALUES (9, "Yamaha Bolt", "Cruiser", 8599.00, 106);
+INSERT INTO motorbikes VALUES (10, "Piaggio mp3", "Scooter", 11999.00, 88);
+INSERT INTO motorbikes VALUES (11, "Triumph Daytona", "Sport", 14000.00, 156);
+INSERT INTO motorbikes VALUES (12, "Vespa Sprint", "Scooter", 5799.00, 60);
+INSERT INTO motorbikes VALUES (13, "Ducati Diavel", "Cruiser", 24895.00, 169);
+INSERT INTO motorbikes VALUES (14, "KTM RC", "Sport", 5799.00, 112);
+INSERT INTO motorbikes VALUES (15, "Lambretta", "Scooter", 5700.00, 30);
+
+
+--Display the database ordered by price.
+SELECT * FROM motorbikes
+ORDER BY price ASC;
+
+--What is the avg price of a cruiser?
+SELECT AVG(Price) "AVG Price of a cruiser"
+FROM motorbikes 
+WHERE Style = "Cruiser";
+
+-- What are the 5 most expensive motorbikes?
+SELECT Name, Style, Price FROM motorbikes
+ORDER BY Price DESC
+LIMIT 5
