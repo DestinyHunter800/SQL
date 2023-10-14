@@ -17,7 +17,7 @@ INSERT INTO motorbikes VALUES (14, "KTM RC", "Sport", 5799.00, 112);
 INSERT INTO motorbikes VALUES (15, "Lambretta", "Scooter", 5700.00, 30);
 
 
--- Display the database ordered by price.
+-- Displays the database ordered by price.
 SELECT * FROM motorbikes
 ORDER BY price ASC;
 
